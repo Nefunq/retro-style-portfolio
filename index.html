@@ -1,0 +1,1877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arshad - Data Scientist</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* 2000s RETRO WEB — THE DEFINITIVE EXPERIENCE (Optimized for: IE6, Firefox 2, 1024×768 monitors) */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #1a0533;
+      background-image:
+        radial-gradient(ellipse at top, #2d0a5e 0%, #1a0533 60%),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239333ea' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      font-family: Verdana, Geneva, sans-serif;
+      font-size: 12px;
+      color: #ffffff;
+      min-height: 100vh;
+    }
+
+    /* ── SCROLLBAR BLING ── */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #1a0533;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #ff00ff, #9333ea);
+      border-radius: 5px;
+    }
+
+    /* TOP BANNER / HEADER */
+    #site-header {
+      background: linear-gradient(180deg, #0d001a 0%, #2d0a5e 50%, #0d001a 100%);
+      border-bottom: 3px solid #ff00ff;
+      padding: 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #site-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(90deg,
+          transparent 0px, transparent 60px,
+          rgba(255, 0, 255, 0.04) 60px, rgba(255, 0, 255, 0.04) 61px);
+      pointer-events: none;
+    }
+
+    .header-stars {
+      font-size: 11px;
+      color: #ff00ff;
+      letter-spacing: 3px;
+      padding: 8px 0 4px;
+      animation: startwinkle 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes startwinkle {
+      from {
+        opacity: 0.6;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .site-title {
+      font-family: Impact, 'Arial Black', sans-serif;
+      font-size: clamp(2rem, 6vw, 4.5rem);
+      background: linear-gradient(180deg, #ffffff 0%, #ff99ff 40%, #cc00cc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      line-height: 1;
+      padding: 10px 0 6px;
+      filter: drop-shadow(0 0 18px rgba(255, 0, 255, 0.7));
+      animation: titlePulse 3s ease-in-out infinite;
+    }
+
+    @keyframes titlePulse {
+
+      0%,
+      100% {
+        filter: drop-shadow(0 0 18px rgba(255, 0, 255, 0.7));
+      }
+
+      50% {
+        filter: drop-shadow(0 0 32px rgba(255, 0, 255, 1));
+      }
+    }
+
+    .site-subtitle {
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 14px;
+      color: #00ffff;
+      padding-bottom: 6px;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    /* MSN-style away message box */
+    .away-msg {
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid #ff00ff;
+      border-radius: 4px;
+      padding: 4px 14px;
+      margin: 6px auto 10px;
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 11px;
+      color: #ffff99;
+    }
+
+    .away-msg::before {
+      content: "💬 ";
+    }
+
+    /* ── TOP NAV ── */
+    #top-nav {
+      background: linear-gradient(180deg, #4a0080 0%, #2d004d 100%);
+      border-top: 2px solid #9900cc;
+      border-bottom: 2px solid #9900cc;
+      padding: 6px 0;
+      text-align: center;
+    }
+
+    #top-nav a {
+      display: inline-block;
+      font-family: Verdana, sans-serif;
+      font-size: 11px;
+      font-weight: bold;
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 16px;
+      margin: 0 2px;
+      background: linear-gradient(180deg, #7700cc 0%, #4a0080 100%);
+      border: 1px solid #cc00ff;
+      border-radius: 3px;
+      transition: background 0.15s;
+    }
+
+    #top-nav a:hover {
+      background: linear-gradient(180deg, #cc00ff 0%, #7700cc 100%);
+      color: #fff;
+    }
+
+    /* ── GLITTER DIVIDER ── */
+    .glitter-div {
+      text-align: center;
+      font-size: 18px;
+      padding: 6px 0;
+      color: #ff00ff;
+      text-shadow: 0 0 8px #ff00ff;
+      letter-spacing: 4px;
+      background: linear-gradient(90deg, transparent, rgba(153, 0, 204, 0.2), transparent);
+    }
+
+    /* MAIN LAYOUT (3-column table era) */
+    #main-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 10px 8px 20px;
+      display: grid;
+      grid-template-columns: 170px 1fr 150px;
+      grid-template-rows: auto;
+      gap: 10px;
+    }
+
+    /* SIDEBAR LEFT */
+    #sidebar-left {
+      grid-column: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    /* Profile box */
+    .profile-box {
+      background: linear-gradient(180deg, #2d004d 0%, #1a0033 100%);
+      border: 2px solid #cc00ff;
+      border-radius: 6px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .profile-box-header {
+      background: linear-gradient(90deg, #7700cc, #cc00ff, #7700cc);
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 11px;
+      font-weight: bold;
+      color: #fff;
+      padding: 4px 6px;
+      letter-spacing: 1px;
+    }
+
+    .profile-avatar {
+      width: 100px;
+      height: 100px;
+      margin: 10px auto 6px;
+      background: linear-gradient(135deg, #4a0080, #cc00ff);
+      border: 3px solid #ff00ff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+    }
+
+    .profile-name {
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 13px;
+      color: #ff99ff;
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+
+    .profile-status {
+      font-size: 10px;
+      color: #00ff88;
+      margin-bottom: 8px;
+    }
+
+    .profile-status::before {
+      content: "● ";
+    }
+
+    .profile-box-body {
+      padding: 6px 10px 10px;
+      font-size: 10px;
+      color: #ccaaff;
+      text-align: left;
+      line-height: 1.8;
+    }
+
+    .profile-box-body b {
+      color: #ff99ff;
+    }
+
+    /* Sidebar box */
+    .sidebar-box {
+      background: linear-gradient(180deg, #1a0033 0%, #120022 100%);
+      border: 1px solid #7700cc;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .sidebar-box-title {
+      background: linear-gradient(90deg, #4a0080, #7700cc);
+      color: #fff;
+      font-family: Verdana, sans-serif;
+      font-size: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 8px;
+    }
+
+    .sidebar-box-body {
+      padding: 8px;
+      font-size: 10px;
+      color: #ccaaff;
+      line-height: 1.8;
+    }
+
+    .sidebar-box-body a {
+      color: #ff99ff;
+      text-decoration: none;
+    }
+
+    .sidebar-box-body a:hover {
+      text-decoration: underline;
+      color: #00ffff;
+    }
+
+    /* hit counter */
+    .hit-counter {
+      display: flex;
+      justify-content: center;
+      gap: 2px;
+      padding: 6px 0;
+    }
+
+    .counter-digit {
+      background: #000;
+      color: #ff0000;
+      font-family: 'Courier New', monospace;
+      font-size: 20px;
+      font-weight: bold;
+      width: 22px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #333;
+      border-radius: 2px;
+      text-shadow: 0 0 6px #ff0000;
+    }
+
+    /* online badge */
+    .online-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 10px;
+      color: #00ff88;
+      background: rgba(0, 255, 136, 0.1);
+      border: 1px solid #00ff88;
+      border-radius: 10px;
+      padding: 2px 8px;
+      margin: 4px 0;
+    }
+
+    /* tag cloud */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+    }
+
+    .tag-cloud-item {
+      background: rgba(153, 0, 204, 0.3);
+      border: 1px solid #9900cc;
+      border-radius: 3px;
+      padding: 1px 5px;
+      font-size: 9px;
+      color: #cc99ff;
+      cursor: default;
+    }
+
+    .tag-cloud-item:hover {
+      background: rgba(255, 0, 255, 0.3);
+      color: #fff;
+    }
+
+    /* MAIN CONTENT CENTER */
+    #content-main {
+      grid-column: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* Content box */
+    .content-box {
+      background: linear-gradient(180deg, #1e0040 0%, #130028 100%);
+      border: 2px solid #7700cc;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(153, 0, 204, 0.3);
+    }
+
+    .content-box-header {
+      background: linear-gradient(90deg, #4a0080 0%, #9933cc 50%, #4a0080 100%);
+      padding: 7px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid #cc00ff;
+    }
+
+    .content-box-header-icon {
+      font-size: 16px;
+    }
+
+    .content-box-title {
+      font-family: Impact, 'Arial Black', sans-serif;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+    }
+
+    .content-box-body {
+      padding: 14px 16px;
+    }
+
+    /* ── ABOUT / HERO ── */
+    .about-flex {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .about-text-main {
+      flex: 1;
+    }
+
+    .about-headline {
+      font-family: Impact, sans-serif;
+      font-size: 28px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      background: linear-gradient(90deg, #ff99ff, #ffffff, #cc99ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 4px;
+      line-height: 1;
+    }
+
+    .about-tagline {
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 12px;
+      color: #00ffff;
+      margin-bottom: 10px;
+      padding: 4px 10px;
+      background: rgba(0, 255, 255, 0.08);
+      border-left: 3px solid #00ffff;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .about-desc {
+      font-size: 12px;
+      color: #ccaaff;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    /* typed terminal */
+    .terminal-box {
+      background: #000;
+      border: 1px solid #00ff00;
+      border-radius: 4px;
+      padding: 8px 12px;
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      color: #00ff00;
+      margin-bottom: 12px;
+      text-shadow: 0 0 4px #00ff00;
+    }
+
+    .terminal-prompt {
+      color: #00ffff;
+    }
+
+    .cursor-blink {
+      display: inline-block;
+      width: 7px;
+      height: 12px;
+      background: #00ff00;
+      animation: blink2k 0.8s step-end infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes blink2k {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+
+    /* glossy buttons */
+    .btn-2k {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: Verdana, sans-serif;
+      font-size: 11px;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+      padding: 6px 16px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(180deg, #aa44ff 0%, #7700cc 50%, #5500aa 100%);
+      box-shadow: 0 2px 8px rgba(170, 0, 255, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      transition: all 0.15s;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn-2k:hover {
+      background: linear-gradient(180deg, #cc66ff 0%, #9933cc 50%, #7700aa 100%);
+      box-shadow: 0 4px 14px rgba(170, 0, 255, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      transform: translateY(-1px);
+    }
+
+    .btn-2k.green {
+      background: linear-gradient(180deg, #44cc66 0%, #228833 50%, #006622 100%);
+      box-shadow: 0 2px 8px rgba(0, 200, 100, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-2k.blue {
+      background: linear-gradient(180deg, #4499ff 0%, #0066cc 50%, #003399 100%);
+      box-shadow: 0 2px 8px rgba(0, 100, 255, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-row-2k {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    /* stats counter row */
+    .stats-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+
+    .stat-box {
+      background: linear-gradient(180deg, #2d0050 0%, #1a0033 100%);
+      border: 1px solid #cc00ff;
+      border-radius: 6px;
+      padding: 8px 16px;
+      text-align: center;
+      flex: 1;
+      min-width: 80px;
+    }
+
+    .stat-box-num {
+      font-family: Impact, sans-serif;
+      font-size: 28px;
+      color: #ff00ff;
+      text-shadow: 0 0 12px #ff00ff;
+      line-height: 1;
+    }
+
+    .stat-box-label {
+      font-size: 9px;
+      color: #cc99ff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 2px;
+    }
+
+    /* SKILLS */
+    .skills-outer {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .skill-category-label {
+      font-family: Verdana, sans-serif;
+      font-size: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #ff99ff;
+      margin-bottom: 5px;
+    }
+
+    .tags-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+
+    .tag-2k {
+      display: inline-block;
+      font-family: Verdana, sans-serif;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 3px 10px;
+      border-radius: 3px;
+      text-decoration: none;
+      background: linear-gradient(180deg, #5500aa 0%, #330077 100%);
+      color: #cc99ff;
+      border: 1px solid #7700cc;
+    }
+
+    .tag-2k:hover {
+      background: linear-gradient(180deg, #9933cc 0%, #6600aa 100%);
+      color: #fff;
+    }
+
+    .tag-2k.teal {
+      background: linear-gradient(180deg, #006666 0%, #004444 100%);
+      color: #00ffcc;
+      border-color: #009999;
+    }
+
+    /* skill bars */
+    .skill-bar-2k {
+      margin-bottom: 10px;
+    }
+
+    .skill-bar-2k-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: #ccaaff;
+      margin-bottom: 4px;
+    }
+
+    .skill-bar-2k-track {
+      height: 14px;
+      background: #0d001a;
+      border: 1px solid #4a0080;
+      border-radius: 7px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .skill-bar-2k-fill {
+      height: 100%;
+      border-radius: 7px;
+      background: linear-gradient(90deg, #9933cc 0%, #ff00ff 50%, #cc00cc 100%);
+      box-shadow: 0 0 8px rgba(255, 0, 255, 0.5);
+      width: 0;
+      transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+
+    .skill-bar-2k-fill::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, transparent 50%);
+      border-radius: 7px;
+    }
+
+    /* PROJECTS */
+    .projects-2k-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 10px;
+    }
+
+    .project-2k-card {
+      background: linear-gradient(180deg, #1e0040 0%, #120022 100%);
+      border: 1px solid #7700cc;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .project-2k-card:hover {
+      border-color: #ff00ff;
+      box-shadow: 0 0 16px rgba(255, 0, 255, 0.3);
+    }
+
+    .project-2k-header {
+      background: linear-gradient(90deg, #330066, #5500aa);
+      padding: 7px 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid #7700cc;
+    }
+
+    .project-2k-icon {
+      font-size: 18px;
+    }
+
+    .project-2k-name {
+      font-family: Verdana, sans-serif;
+      font-size: 11px;
+      font-weight: bold;
+      color: #ff99ff;
+    }
+
+    .project-2k-body {
+      padding: 10px 12px;
+    }
+
+    .project-2k-desc {
+      font-size: 10px;
+      color: #aa88cc;
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+
+    .project-2k-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+      margin-bottom: 8px;
+    }
+
+    .project-2k-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: Verdana, sans-serif;
+      font-size: 10px;
+      font-weight: bold;
+      color: #00ffff;
+      text-decoration: none;
+      text-shadow: 0 0 6px #00ffff;
+    }
+
+    .project-2k-link:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* EXPERIENCE / EDUCATION / CERTS */
+    .timeline-2k {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .timeline-2k-item {
+      background: rgba(255, 0, 255, 0.05);
+      border: 1px solid rgba(153, 0, 204, 0.4);
+      border-left: 4px solid #cc00ff;
+      border-radius: 0 6px 6px 0;
+      padding: 10px 14px;
+    }
+
+    .timeline-2k-date {
+      font-family: 'Courier New', monospace;
+      font-size: 10px;
+      color: #00ffff;
+      margin-bottom: 3px;
+      text-shadow: 0 0 5px #00ffff;
+    }
+
+    .timeline-2k-role {
+      font-family: Verdana, sans-serif;
+      font-size: 13px;
+      font-weight: bold;
+      color: #ff99ff;
+      margin-bottom: 2px;
+    }
+
+    .timeline-2k-company {
+      font-size: 11px;
+      color: #aa88cc;
+      margin-bottom: 6px;
+    }
+
+    .timeline-2k-desc {
+      font-size: 11px;
+      color: #9977bb;
+      line-height: 1.7;
+    }
+
+    /* certs as badges */
+    .cert-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .cert-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #2d0050 0%, #1a0033 100%);
+      border: 2px solid #9933cc;
+      border-radius: 8px;
+      padding: 8px 14px;
+      transition: border-color 0.2s;
+    }
+
+    .cert-badge:hover {
+      border-color: #ff00ff;
+    }
+
+    .cert-badge-icon {
+      font-size: 22px;
+    }
+
+    .cert-badge-name {
+      font-size: 11px;
+      font-weight: bold;
+      color: #ff99ff;
+    }
+
+    .cert-badge-issuer {
+      font-size: 10px;
+      color: #9977bb;
+    }
+
+    /* CONTACT */
+    .contact-2k {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+    }
+
+    .contact-headline {
+      font-family: Impact, sans-serif;
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #ff00ff;
+      text-shadow: 0 0 16px #ff00ff;
+      animation: titlePulse 3s ease-in-out infinite;
+    }
+
+    .contact-email-2k {
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 16px;
+      color: #00ffff;
+      text-decoration: none;
+      text-shadow: 0 0 8px #00ffff;
+      border-bottom: 1px dashed #00ffff;
+      padding-bottom: 2px;
+    }
+
+    .contact-email-2k:hover {
+      color: #fff;
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .msn-status {
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 11px;
+      color: #ffff99;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid #ffaa00;
+      border-radius: 4px;
+      padding: 4px 12px;
+    }
+
+    .msn-status::before {
+      content: "💬 ";
+    }
+
+    /* RIGHT SIDEBAR */
+    #sidebar-right {
+      grid-column: 3;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    /* ── now playing ── */
+    .now-playing {
+      background: linear-gradient(180deg, #1e0040 0%, #0d0022 100%);
+      border: 1px solid #7700cc;
+      border-radius: 4px;
+      padding: 8px;
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 10px;
+      color: #cc99ff;
+      line-height: 1.7;
+    }
+
+    .now-playing:hover {
+      border-color: rgba(0, 255, 170, 0.35);
+    }
+
+    .np-header {
+      font-size: 10px;
+      font-weight: 700;
+      color: #cc99ff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+      text-shadow: 0 0 12px rgba(0, 255, 170, 0.15);
+    }
+
+    .np-scroll {
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 6px;
+      padding: 2px 6px;
+      border: 1px solid #1a2a22;
+      margin-bottom: 6px;
+    }
+
+    .np-scroll marquee {
+      color: #cc99ff;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .np-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .np-timer {
+      color: #cc99ff;
+      font-size: 9px;
+      letter-spacing: 0.5px;
+      opacity: 0.8;
+    }
+
+    .np-play-btn {
+      cursor: pointer;
+      background: #0f1a14;
+      padding: 2px 14px;
+      border-radius: 4px;
+      border: 1px solid #2a4a3a;
+      color: #66ffaa;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      transition: all 0.15s;
+      font-family: 'Courier New', monospace;
+      box-shadow: inset 0 0 8px rgba(0, 255, 170, 0.05);
+    }
+
+    .np-play-btn:hover {
+      background: #1a2f24;
+      border-color: #44dd88;
+      box-shadow: 0 0 20px rgba(0, 255, 170, 0.10);
+      transform: scale(1.02);
+    }
+
+    .np-play-btn:active {
+      transform: scale(0.95);
+    }
+
+    /* ── animated equalizer bars ── */
+    .np-bars {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 4px;
+      height: 24px;
+    }
+
+    .np-bar {
+      width: 5px;
+      background: linear-gradient(180deg, #66ffaa, #229966);
+      border-radius: 2px 2px 0 0;
+      animation: equalize 0.5s infinite alternate ease-in-out;
+      transform-origin: bottom;
+      box-shadow: 0 0 10px rgba(0, 255, 170, 0.15);
+    }
+
+    @keyframes equalize {
+      0% {
+        transform: scaleY(0.3);
+        opacity: 0.5;
+      }
+
+      100% {
+        transform: scaleY(1);
+        opacity: 1;
+      }
+    }
+
+    /* tiny fix for the hidden player */
+    #yt-player {
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .np-body {
+      position: relative;
+    }
+
+    /* Guestbook / quotes */
+    .quote-box {
+      background: linear-gradient(180deg, #1e0040 0%, #0d0022 100%);
+      border: 1px solid #7700cc;
+      border-radius: 4px;
+      padding: 8px;
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 10px;
+      color: #cc99ff;
+      line-height: 1.7;
+    }
+
+    .quote-box b {
+      color: #ff99ff;
+    }
+
+    .quote-box .attribution {
+      color: #9977bb;
+      font-size: 9px;
+      margin-top: 4px;
+    }
+
+    /* Spinning 3D cube */
+    .cube-container {
+      perspective: 120px;
+      width: 50px;
+      height: 50px;
+      margin: 8px auto;
+    }
+
+    .cube {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: spin3d 6s linear infinite;
+    }
+
+    @keyframes spin3d {
+      from {
+        transform: rotateX(20deg) rotateY(0deg);
+      }
+
+      to {
+        transform: rotateX(20deg) rotateY(360deg);
+      }
+    }
+
+    .cube-face {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: rgba(153, 0, 204, 0.3);
+      border: 1px solid #cc00ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .cube-face.front {
+      transform: translateZ(25px);
+    }
+
+    .cube-face.back {
+      transform: rotateY(180deg) translateZ(25px);
+    }
+
+    .cube-face.left {
+      transform: rotateY(-90deg) translateZ(25px);
+    }
+
+    .cube-face.right {
+      transform: rotateY(90deg) translateZ(25px);
+    }
+
+    .cube-face.top {
+      transform: rotateX(90deg) translateZ(25px);
+    }
+
+    .cube-face.bottom {
+      transform: rotateX(-90deg) translateZ(25px);
+    }
+
+    /* fun badges */
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      padding: 4px 6px;
+    }
+
+    .fun-badge {
+      font-size: 9px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: Verdana, sans-serif;
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .badge-purple {
+      background: #660099;
+      color: #fff;
+      border: 1px solid #9900ff;
+    }
+
+    .badge-blue {
+      background: #003399;
+      color: #fff;
+      border: 1px solid #0066ff;
+    }
+
+    .badge-green {
+      background: #006633;
+      color: #0f0;
+      border: 1px solid #00aa55;
+    }
+
+    .badge-red {
+      background: #990000;
+      color: #ff9999;
+      border: 1px solid #ff0000;
+    }
+
+    .badge-gold {
+      background: #663300;
+      color: #ffcc00;
+      border: 1px solid #ffaa00;
+    }
+
+    /* FOOTER */
+    #site-footer {
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 12px 8px 20px;
+    }
+
+    .footer-divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #cc00ff, #ff00ff, #cc00ff, transparent);
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #9966cc;
+      font-size: 10px;
+      text-decoration: none;
+      padding: 0 8px;
+      border-right: 1px solid #4a0080;
+    }
+
+    .footer-links a:last-child {
+      border-right: none;
+    }
+
+    .footer-links a:hover {
+      color: #ff99ff;
+      text-decoration: underline;
+    }
+
+    .footer-text {
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 11px;
+      color: #6633aa;
+      margin-top: 6px;
+      line-height: 1.8;
+    }
+
+    .footer-text b {
+      color: #cc99ff;
+    }
+
+    .footer-hearts {
+      color: #ff00ff;
+      animation: startwinkle 1s ease-in-out infinite alternate;
+    }
+
+    /* FADE ANIMATION */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 768px) {
+      #main-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      #sidebar-left,
+      #sidebar-right {
+        display: none;
+      }
+
+      #content-main {
+        grid-column: 1;
+      }
+    }
+
+    @media(prefers-reduced-motion: reduce) {
+
+      .fade-up,
+      .skill-bar-2k-fill,
+      .np-bar,
+      .cube {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div id="site-header">
+    <div class="header-stars">✦ ✧ ✦ ✧ ✦ ✧ ✦ ✧ ✦ ✧ ✦ ✧ ✦ ✧ ✦ ✧ ✦ ✧ ✦</div>
+    <div class="site-title">Mohammed Arshad</div>
+    <div class="site-subtitle">✦ Data Scientist · Python Developer · Full-Stack Developer ✦</div>
+    <div class="away-msg">Currently online — available for opportunities! drop me an email!</div>
+  </div>
+
+  <!-- TOP NAV -->
+  <div id="top-nav">
+    <a href="#about">🏠 Home</a>
+    <a href="#skills">💻 Skills</a>
+    <a href="#projects">🚀 Projects</a>
+    <a href="#experience">💼 Experience</a>
+    <a href="#education">🎓 Education</a>
+    <a href="#certifications">🏆 Certs</a>
+    <a href="#contact">📧 Contact</a>
+  </div>
+
+  <div class="glitter-div">✦ ✦ ✦ WELCOME TO MY PORTFOLIO ✦ ✦ ✦</div>
+
+  <!-- MAIN LAYOUT -->
+  <div id="main-wrapper">
+
+    <!-- SIDEBAR LEFT -->
+    <aside id="sidebar-left">
+
+      <div class="profile-box">
+        <div class="profile-box-header">✦ Profile ✦</div>
+        <div class="profile-avatar">👨‍💻</div>
+        <div class="profile-name">@Nefunq</div>
+        <div class="profile-status">Online</div>
+        <div class="profile-box-body">
+          <b>From:</b> Pune, MH 🇮🇳<br>
+          <b>Status:</b> Availalble<br>
+          <b>Mood:</b> Excited!<br>
+          <b>GitHub:</b> <a href="https://github.com/Nefunq" target="_blank">Nefunq</a><br>
+          <b>Email:</b> <a href="mailto:arshadmomin7750@gmail.com">click here</a>
+        </div>
+      </div>
+
+      <div class="sidebar-box">
+        <div class="sidebar-box-title">📊 Stats</div>
+        <div class="sidebar-box-body" style="text-align:center;">
+          <div style="color:#ff99ff; margin-bottom:4px; font-size:10px;">SITE VISITORS</div>
+          <div class="hit-counter">
+            <div class="counter-digit">0</div>
+            <div class="counter-digit">4</div>
+            <div class="counter-digit">2</div>
+            <div class="counter-digit">6</div>
+            <div class="counter-digit">9</div>
+          </div>
+          <div style="font-size:9px; color:#7744aa; margin-top:3px;">YOU ARE VISITOR #42,469</div>
+        </div>
+      </div>
+
+      <div class="sidebar-box">
+        <div class="sidebar-box-title">🔖 Tags</div>
+        <div class="sidebar-box-body">
+          <div class="tag-cloud">
+            <span class="tag-cloud-item">Python</span>
+            <span class="tag-cloud-item">ML</span>
+            <span class="tag-cloud-item">Data</span>
+            <span class="tag-cloud-item">SQL</span>
+            <span class="tag-cloud-item">PHP</span>
+            <span class="tag-cloud-item">JS</span>
+            <span class="tag-cloud-item">GitHub</span>
+            <span class="tag-cloud-item">Pandas</span>
+            <span class="tag-cloud-item">Sklearn</span>
+            <span class="tag-cloud-item">Folium</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-box">
+        <div class="sidebar-box-title">⚡ Links</div>
+        <div class="sidebar-box-body">
+          <a href="https://github.com/Nefunq" target="_blank">🐱 My GitHub</a><br>
+          <a href="Arshad_Resume.pdf" target="_blank">📄 Resume.pdf</a><br>
+          <a href="mailto:arshadmomin7750@gmail.com">📧 Email Me</a><br>
+          <a href="tel:7020818488">📞 Call Me</a>
+        </div>
+      </div>
+
+      <div class="sidebar-box">
+        <div class="sidebar-box-title">🏅 Badges</div>
+        <div class="badge-row">
+          <div class="fun-badge badge-purple">Python<br>Dev</div>
+          <div class="fun-badge badge-blue">SQL<br>Pro</div>
+          <div class="fun-badge badge-green">89.5%<br>Accuracy</div>
+          <div class="fun-badge badge-red">Loves<br>Patterns</div>
+          <div class="fun-badge badge-gold">Data<br>Nerd</div>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main id="content-main">
+
+      <!-- ABOUT -->
+      <div class="content-box fade-up" id="about">
+        <div class="content-box-header">
+          <span class="content-box-header-icon">🖐️</span>
+          <span class="content-box-title">About Me</span>
+        </div>
+        <div class="content-box-body">
+          <div class="about-flex">
+            <div class="about-text-main">
+              <div class="about-headline">Mohammed Arshad</div>
+              <div class="about-tagline">Data Scientist &amp; Full-Stack Developer</div>
+              <p class="about-desc">
+                I turn raw, messy data into decisions that matter —
+                and build the interfaces to make those insights accessible.
+                Self-driven, obsessed with clean models and cleaner code.
+                Currently looking for full-time opportunities, freelance, or just someone to geek out about data with!
+              </p>
+              <div class="terminal-box">
+                <span class="terminal-prompt">C:\Users\Arshad&gt; </span><span id="typed-role">Data
+                  Scientist</span><span class="cursor-blink"></span>
+              </div>
+              <div class="btn-row-2k">
+                <a href="#projects" class="btn-2k">🗂️ View Projects</a>
+                <a href="#contact" class="btn-2k">📧 Contact Me</a>
+                <a href="Arshad_Resume.pdf" target="_blank" class="btn-2k blue">📄 Resume PDF</a>
+              </div>
+            </div>
+          </div>
+          <div class="stats-row">
+            <div class="stat-box">
+              <div class="stat-box-num" data-target="6">0</div>
+              <div class="stat-box-label">Projects Built</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-num" data-target="89" data-suffix="%">0</div>
+              <div class="stat-box-label">Best Model Acc</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-num" data-target="3">0</div>
+              <div class="stat-box-label">Certifications</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="content-box fade-up" id="skills">
+        <div class="content-box-header">
+          <span class="content-box-header-icon">💻</span>
+          <span class="content-box-title">Skills &amp; Technologies</span>
+        </div>
+        <div class="content-box-body">
+          <div class="skills-outer">
+            <div>
+              <div class="skill-category-label">📊 Data Science</div>
+              <div class="tags-wrap">
+                <span class="tag-2k">Pandas</span><span class="tag-2k">NumPy</span><span
+                  class="tag-2k">Scikit-learn</span>
+                <span class="tag-2k">Matplotlib</span><span class="tag-2k">Seaborn</span><span
+                  class="tag-2k">Folium</span><span class="tag-2k">Jupyter</span>
+              </div>
+            </div>
+            <div>
+              <div class="skill-category-label">💻 Programming</div>
+              <div class="tags-wrap">
+                <span class="tag-2k">Python</span><span class="tag-2k">JavaScript</span><span class="tag-2k">PHP</span>
+                <span class="tag-2k">C</span><span class="tag-2k">Java</span><span class="tag-2k">SQL</span>
+              </div>
+            </div>
+            <div>
+              <div class="skill-category-label">🌐 Web &amp; Database</div>
+              <div class="tags-wrap">
+                <span class="tag-2k">HTML/CSS</span><span class="tag-2k">MySQL</span>
+                <span class="tag-2k">DB Design</span><span class="tag-2k">Query Optimisation</span>
+              </div>
+            </div>
+            <div>
+              <div class="skill-category-label">🛠️ Tools</div>
+              <div class="tags-wrap">
+                <span class="tag-2k">Git / GitHub</span><span class="tag-2k">VS Code</span>
+                <span class="tag-2k">Conda</span><span class="tag-2k">Spyder</span><span class="tag-2k">CLI</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:16px; border-top:1px solid #4a0080; padding-top:14px;">
+            <div class="skill-category-label">📈 Proficiency</div>
+            <div class="skill-bar-2k">
+              <div class="skill-bar-2k-label"><span>Python</span><span>90%</span></div>
+              <div class="skill-bar-2k-track">
+                <div class="skill-bar-2k-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-bar-2k">
+              <div class="skill-bar-2k-label"><span>JavaScript</span><span>85%</span></div>
+              <div class="skill-bar-2k-track">
+                <div class="skill-bar-2k-fill" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-bar-2k">
+              <div class="skill-bar-2k-label"><span>Data Analysis &amp; ML</span><span>82%</span></div>
+              <div class="skill-bar-2k-track">
+                <div class="skill-bar-2k-fill" data-width="82"></div>
+              </div>
+            </div>
+            <div class="skill-bar-2k">
+              <div class="skill-bar-2k-label"><span>SQL / Database</span><span>78%</span></div>
+              <div class="skill-bar-2k-track">
+                <div class="skill-bar-2k-fill" data-width="78"></div>
+              </div>
+            </div>
+            <div class="skill-bar-2k">
+              <div class="skill-bar-2k-label"><span>PHP / Web Dev</span><span>70%</span></div>
+              <div class="skill-bar-2k-track">
+                <div class="skill-bar-2k-fill" data-width="70"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECTS -->
+      <div class="content-box fade-up" id="projects">
+        <div class="content-box-header">
+          <span class="content-box-header-icon">🗂️</span>
+          <span class="content-box-title">Featured Projects</span>
+        </div>
+        <div class="content-box-body">
+          <div class="projects-2k-grid">
+
+            <div class="project-2k-card">
+              <div class="project-2k-header">
+                <span class="project-2k-icon">🌍</span>
+                <div class="project-2k-name">World Population Analysis</div>
+              </div>
+              <div class="project-2k-body">
+                <div class="project-2k-desc">Cleaned and merged World Bank datasets; applied logarithmic scaling and
+                  regional aggregation to reveal global population distribution patterns through custom visualizations.
+                </div>
+                <div class="project-2k-tags"><span class="tag-2k">Python</span><span class="tag-2k">Pandas</span><span
+                    class="tag-2k">Matplotlib</span></div>
+                <a href="https://github.com/Nefunq/SCT_DS_1" target="_blank" class="project-2k-link">🔗 View on GitHub
+                  »</a>
+              </div>
+            </div>
+
+            <div class="project-2k-card">
+              <div class="project-2k-header">
+                <span class="project-2k-icon">🚢</span>
+                <div class="project-2k-name">Titanic Survival Analysis</div>
+              </div>
+              <div class="project-2k-body">
+                <div class="project-2k-desc">Engineered family size and age group features, used class/gender-based
+                  imputation for missing values, and uncovered survival patterns across demographic dimensions.</div>
+                <div class="project-2k-tags"><span class="tag-2k">Python</span><span class="tag-2k">Pandas</span><span
+                    class="tag-2k">Seaborn</span><span class="tag-2k">Feature Eng.</span></div>
+                <a href="https://github.com/Nefunq/SCT_DS_2" target="_blank" class="project-2k-link">🔗 View on GitHub
+                  »</a>
+              </div>
+            </div>
+
+            <div class="project-2k-card">
+              <div class="project-2k-header">
+                <span class="project-2k-icon">🏦</span>
+                <div class="project-2k-name">Bank Marketing Prediction</div>
+              </div>
+              <div class="project-2k-body">
+                <div class="project-2k-desc">Scikit-learn pipeline with Decision Tree classifier to predict term deposit
+                  subscriptions — achieving ~89.5% accuracy handling class imbalance and categorical features.</div>
+                <div class="project-2k-tags"><span class="tag-2k">Scikit-learn</span><span
+                    class="tag-2k">Pipelines</span><span class="tag-2k">ColumnTransformer</span></div>
+                <a href="https://github.com/Nefunq/SCT_DS_3" target="_blank" class="project-2k-link">🔗 View on GitHub
+                  »</a>
+              </div>
+            </div>
+
+            <div class="project-2k-card">
+              <div class="project-2k-header">
+                <span class="project-2k-icon">🚗</span>
+                <div class="project-2k-name">UK Road Accident Analysis</div>
+              </div>
+              <div class="project-2k-body">
+                <div class="project-2k-desc">Processed timestamps into hourly patterns and mapped accident hotspots
+                  interactively with Folium. Revealed key risk factors across weather, road surfaces, vehicle types.
+                </div>
+                <div class="project-2k-tags"><span class="tag-2k">Python</span><span class="tag-2k">Folium</span><span
+                    class="tag-2k">Pandas</span><span class="tag-2k">Geospatial</span></div>
+                <a href="https://github.com/Nefunq/SCT_DS_4" target="_blank" class="project-2k-link">🔗 View on GitHub
+                  »</a>
+              </div>
+            </div>
+
+            <div class="project-2k-card">
+              <div class="project-2k-header">
+                <span class="project-2k-icon">💸</span>
+                <div class="project-2k-name">SplitWise Clone</div>
+              </div>
+              <div class="project-2k-body">
+                <div class="project-2k-desc">Full-stack expense-sharing web app with group management, equal-split
+                  billing, live net balances, and settlement tracking — using MySQL transactions for data integrity.
+                </div>
+                <div class="project-2k-tags"><span class="tag-2k teal">PHP</span><span
+                    class="tag-2k teal">MySQL</span><span class="tag-2k teal">HTML/CSS</span><span
+                    class="tag-2k teal">JS</span></div>
+                <a href="https://github.com/Nefunq/splitwise-clone" target="_blank" class="project-2k-link">🔗 View on
+                  GitHub »</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="content-box fade-up" id="experience">
+        <div class="content-box-header">
+          <span class="content-box-header-icon">💼</span>
+          <span class="content-box-title">Experience</span>
+        </div>
+        <div class="content-box-body">
+          <div class="timeline-2k">
+            <div class="timeline-2k-item">
+              <div class="timeline-2k-date">🗓️ Feb 2026 – Mar 2026</div>
+              <div class="timeline-2k-role">Data Science Intern</div>
+              <div class="timeline-2k-company">SkillCraft Technology, Mumbai</div>
+              <div class="timeline-2k-desc">Virtual internship covering the full data analysis lifecycle across four
+                distinct projects — from data wrangling and feature engineering to model building and interactive
+                visualisation. Independently completed all assignments end-to-end.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="content-box fade-up" id="education">
+        <div class="content-box-header">
+          <span class="content-box-header-icon">🎓</span>
+          <span class="content-box-title">Education</span>
+        </div>
+        <div class="content-box-body">
+          <div class="timeline-2k">
+            <div class="timeline-2k-item">
+              <div class="timeline-2k-date">🗓️ Jun 2023 – May 2026</div>
+              <div class="timeline-2k-role">BCA (Science)</div>
+              <div class="timeline-2k-company">Abeda Inamdar Senior College, Pune</div>
+              <div class="timeline-2k-desc">Bachelor of Computer Applications with a science specialisation. Graduated
+                with a strong mathematical and analytical foundation. Built projects spanning data science, web
+                development, and database design throughout the degree.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CERTIFICATIONS -->
+      <div class="content-box fade-up" id="certifications">
+        <div class="content-box-header">
+          <span class="content-box-header-icon">🏆</span>
+          <span class="content-box-title">Certifications</span>
+        </div>
+        <div class="content-box-body">
+          <div class="cert-badges">
+            <div class="cert-badge">
+              <span class="cert-badge-icon">🐍</span>
+              <div>
+                <div class="cert-badge-name">Python Certification</div>
+                <div class="cert-badge-issuer">freeCodeCamp</div>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <span class="cert-badge-icon">🗄️</span>
+              <div>
+                <div class="cert-badge-name">Relational Databases</div>
+                <div class="cert-badge-issuer">freeCodeCamp</div>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <span class="cert-badge-icon">✨</span>
+              <div>
+                <div class="cert-badge-name">JavaScript Certification</div>
+                <div class="cert-badge-issuer">freeCodeCamp</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="content-box fade-up" id="contact">
+        <div class="content-box-header">
+          <span class="content-box-header-icon">📧</span>
+          <span class="content-box-title">Let's Talk</span>
+        </div>
+        <div class="content-box-body">
+          <div class="contact-2k">
+            <div class="contact-headline">✦ Contact me ✦</div>
+            <p
+              style="font-family:'Comic Sans MS',cursive; font-size:12px; color:#cc99ff; max-width:420px; line-height:1.8;">
+              Whether it's a full-time role, freelance project, or just a good conversation about data — hmu! I don't
+              bite 😄
+            </p>
+            <div class="msn-status">currently: caffeinated ☕ and open to work!</div>
+            <a href="mailto:arshadmomin7750@gmail.com" class="contact-email-2k">arshadmomin7750@gmail.com</a>
+            <div class="contact-buttons">
+              <a href="https://github.com/Nefunq" target="_blank" class="btn-2k">🐱 GitHub</a>
+              <a href="mailto:arshadmomin7750@gmail.com" class="btn-2k">📧 Email Me</a>
+              <a href="tel:7020818488" class="btn-2k green">📞 +91 7020818488</a>
+              <span class="btn-2k" style="background:linear-gradient(180deg,#444,#222);">📍 Pune, MH</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- SIDEBAR RIGHT -->
+    <aside id="sidebar-right">
+
+      <div class="sidebar-box">
+        <div class="sidebar-box-title">💜 3D Cube</div>
+        <div class="sidebar-box-body" style="text-align:center;">
+          <div class="cube-container">
+            <div class="cube">
+              <div class="cube-face front">🐍</div>
+              <div class="cube-face back">📊</div>
+              <div class="cube-face left">☕</div>
+              <div class="cube-face right">💻</div>
+              <div class="cube-face top">🧠</div>
+              <div class="cube-face bottom">🤯</div>
+            </div>
+          </div>
+          <div style="font-size:9px; color:#9977bb; margin-top:4px;">
+            🤩 Look at it spin!
+          </div>
+        </div>
+      </div>
+
+      <div class="now-playing">
+        <div class="np-header">♪ now playing</div>
+        <div class="np-body">
+          <div class="np-scroll">
+            <marquee scrollamount="2">🎧 NCS · Cartoon – On & On (feat. Daniel Levi) [NCS Release]</marquee>
+          </div>
+          <div class="np-controls">
+            <div class="np-timer">⚡ · WinAmp 2.95</div>
+            <div id="play-btn" class="np-play-btn">▶</div>
+          </div>
+          <div class="np-bars">
+            <div class="np-bar" style="height:8px; animation-delay:0.0s;"></div>
+            <div class="np-bar" style="height:14px; animation-delay:0.1s;"></div>
+            <div class="np-bar" style="height:10px; animation-delay:0.2s;"></div>
+            <div class="np-bar" style="height:20px; animation-delay:0.3s;"></div>
+            <div class="np-bar" style="height:6px; animation-delay:0.4s;"></div>
+            <div class="np-bar" style="height:16px; animation-delay:0.5s;"></div>
+            <div class="np-bar" style="height:12px; animation-delay:0.6s;"></div>
+          </div>
+          <!-- hidden youtube container -->
+          <div id="yt-player"></div>
+        </div>
+      </div>
+
+      <div class="quote-box">
+        <b>"</b> Code is like humor. When you have to explain it, it's bad. <b>"</b>
+        <div class="attribution">— Cory House</div>
+      </div>
+
+      <div class="sidebar-box">
+        <div class="sidebar-box-title">🗓️ Last Updated</div>
+        <div class="sidebar-box-body">
+          <div id="last-updated" style="font-family:'Courier New',monospace; font-size:10px; color:#cc99ff;"></div>
+          <div style="margin-top:4px; font-size:9px; color:#6644aa;">
+            viewing in: <span style="color:#ff99ff;" id="browser-info">your browser</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-box">
+        <div class="sidebar-box-title">🌟 Fun Facts</div>
+        <div class="sidebar-box-body" style="font-family:'Comic Sans MS',cursive;">
+          ✔ obsessed with clean code<br>
+          ✔ pandas = my bff<br>
+          ✔ coffee &gt; sleep<br>
+          ✔ the 89.5% is real lol<br>
+          ✔ dropped 40% of dataset<br>
+          ✔ pune &gt; everywhere<br>
+        </div>
+      </div>
+
+      <div class="sidebar-box">
+        <div class="sidebar-box-title">🔥 Total XP</div>
+        <div class="sidebar-box-body" style="text-align:center;">
+          <div
+            style="font-family:Impact,sans-serif; font-size:28px; color:#ffff00; text-shadow:0 0 10px #ffaa00; line-height:1;">
+            9,001</div>
+          <div style="font-size:9px; color:#9977bb; margin-top:2px;">it's over 9000 🤭</div>
+          <div
+            style="margin-top:8px; height:10px; background:#0d001a; border:1px solid #7700cc; border-radius:5px; overflow:hidden;">
+            <div style="height:100%; width:90%; background:linear-gradient(90deg,#ffaa00,#ffff00); border-radius:5px;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div id="site-footer">
+    <div class="footer-divider"></div>
+    <div class="footer-links">
+      <a href="#about">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="Arshad_Resume.pdf" target="_blank">Resume</a>
+      <a href="https://github.com/Nefunq" target="_blank">GitHub</a>
+    </div>
+    <div class="footer-text">
+      <span class="footer-hearts">♥ ♥ ♥</span>
+      &nbsp; Designed &amp; coded by <b>Mohammed Arshad</b> © 2026 <span class="footer-hearts">♥ ♥ ♥</span><br>
+      <span style="font-size:9px; color:#4a2277;">
+        · Best viewed at 1024×768 ·
+      </span>
+    </div>
+  </div>
+
+  <script>
+    // ── Typed role ──
+    const roles = ['Data Scientist', 'Python Developer', 'Full-Stack Developer'];
+    let ri = 0, ci = 0, deleting = false;
+    const el = document.getElementById('typed-role');
+    function type() {
+      const word = roles[ri];
+      el.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
+      if (!deleting && ci > word.length) { deleting = true; setTimeout(type, 1400); return; }
+      if (deleting && ci < 0) { deleting = false; ri = (ri + 1) % roles.length; ci = 0; }
+      setTimeout(type, deleting ? 50 : 90);
+    }
+    type();
+
+    // ── Last updated date ──
+    const d = new Date();
+    document.getElementById('last-updated').textContent =
+      d.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+
+    // ── Browser detection (2000s style) ──
+    const ua = navigator.userAgent;
+    let browserName = 'Unknown Browser';
+    if (ua.includes('Firefox')) browserName = 'Mozilla Firefox';
+    else if (ua.includes('Chrome')) browserName = 'Google Chrome';
+    else if (ua.includes('Safari')) browserName = 'Apple Safari';
+    else if (ua.includes('MSIE') || ua.includes('Trident')) browserName = 'Internet Explorer';
+    document.getElementById('browser-info').textContent = browserName;
+
+    // ── Intersection Observer for fade-up + bars ──
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        entry.target.querySelectorAll('.skill-bar-2k-fill').forEach(bar => {
+          bar.style.width = bar.dataset.width + '%';
+        });
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // ── Counter animation ──
+    function animateCount(el) {
+      const target = parseInt(el.dataset.target);
+      const suffix = el.dataset.suffix || '';
+      let current = 0;
+      const step = Math.ceil(target / 40);
+      const interval = setInterval(() => {
+        current = Math.min(current + step, target);
+        el.textContent = current + suffix;
+        if (current >= target) clearInterval(interval);
+      }, 35);
+    }
+    const statsObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.stat-box-num[data-target]').forEach(animateCount);
+          statsObs.disconnect();
+        }
+      });
+    }, { threshold: 0.5 });
+    const statsEl = document.querySelector('.stats-row');
+    if (statsEl) statsObs.observe(statsEl);
+
+    // ── Active nav ──
+    const sections = document.querySelectorAll('.content-box[id]');
+    const navLinks = document.querySelectorAll('#top-nav a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) current = s.id; });
+      navLinks.forEach(a => {
+        const href = a.getAttribute('href').replace('#', '');
+        a.style.background = href === current
+          ? 'linear-gradient(180deg, #cc00ff 0%, #7700cc 100%)'
+          : '';
+      });
+    }, { passive: true });
+
+    // ── YouTube IFrame API Loader ──
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    var isPlaying = false;
+    var playBtn = document.getElementById('play-btn');
+
+    // ── called automatically by YouTube API ──
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('yt-player', {
+        height: '0',
+        width: '0',
+        videoId: 'K4DyBUG242c', // Cartoon – On & On (NCS)
+        playerVars: {
+          'autoplay': 0,
+          'controls': 0,
+          'disablekb': 1,
+          'modestbranding': 1,
+          'loop': 1,
+          'playlist': 'K4DyBUG242c'
+        },
+        events: {
+          'onReady': function (event) {
+            // Player is ready – nothing else needed
+          },
+          'onStateChange': function (event) {
+            // if video ends, reset button text just in case
+            if (event.data == YT.PlayerState.ENDED) {
+              isPlaying = false;
+              playBtn.innerHTML = '▶';
+            }
+          }
+        }
+      });
+    }
+
+    // ── toggle play/pause ──
+    function togglePlay() {
+      if (!player) return;
+      if (isPlaying) {
+        player.pauseVideo();
+        playBtn.innerHTML = '▶';
+      } else {
+        player.playVideo();
+        playBtn.innerHTML = '⏸';
+      }
+      isPlaying = !isPlaying;
+    }
+
+    // ── wire up the button (wait for DOM) ──
+    document.addEventListener('DOMContentLoaded', function () {
+      if (playBtn) {
+        playBtn.addEventListener('click', togglePlay);
+      }
+    });
+
+    // ── fallback if DOM already loaded ──
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      if (playBtn && !playBtn._listener) {
+        playBtn.addEventListener('click', togglePlay);
+        playBtn._listener = true;
+      }
+    }
+  </script>
+</body>
+
+</html>
