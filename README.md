@@ -8,6 +8,7 @@ Worth it!
 ## How to run
 
 Clone it. Open `index.html`. Done!
+If you just want to visit: https://nefunq.github.io/retro-style-portfolio/
 
 ## Who's behind this?
 > Mohammed Arshad - A Data Science enthusiast who occasionally does frontend for fun.
